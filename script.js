@@ -34,6 +34,7 @@ function search(keyword) {
         } else {
             results[i].classList.add('d-block');
             results[i].classList.remove('d-none');
+            results[i].children[0].style.animationName = 'grow';
         }
     }
 

@@ -8,7 +8,8 @@
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
     <!-- Custom CSS -->
@@ -30,7 +31,6 @@
                     <img src="./logo.png" alt="" width="105px">
                 </a>
                 <!-- Website -->
-
                 <div class="nav-large-menu mx-1">
                     <a href="">Home</a>
                     <a href="">Books</a>
@@ -39,11 +39,8 @@
                 </div>
             </div>
             <div class="nav-right">
-                <button class="btn btn-primary mx-1 search-btn-nav" onclick="showHideSearchNavCon()">
-                    <i class="bi bi-search"></i>
-                </button>
-                <div class="dropdown lg-search-hide">
-                    <button class="btn btn-primary dropdown-toggle" style="border: 1px dashed #FF640A !important;"
+                <div class="dropdown lg-search-hide ">
+                    <button class="btn btn-primary dropdown-toggle match-search-box" style="border: 1px dashed #FF640A !important;"
                         type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Genre
                     </button>
@@ -65,24 +62,33 @@
                             <button class="btn-primary btn" onclick="search(this.innerHTML)">Psychological</button>
                             <button class="btn-primary btn" onclick="search(this.innerHTML)">Post-Apocalyptic</button>
                         </div>
-
                     </ul>
                 </div>
-                <div class="position-relative me-3">
-                    <div class="input-group mx-1">
-                        <span class="input-group-text"><i class="bi bi-search"></i></span>
-                        <input type="text" class="form-control search-input" id="search-lg-input"
-                            placeholder="Search..." oninput="searchInput(this.value)">
-
+                <div class="modern-search-box position-relative me-3 mx-4">
+                    <div class="d-flex align-items-center bg-white rounded-4 shadow-sm border border-1 border-secondary" style="transition: border-color 0.3s, box-shadow 0.3s;">
+                        <div class="ps-3 pe-2 py-2">
+                            <i class="fas fa-search" style="color: #FF640A; font-size: 1rem;"></i>
+                        </div>
+                        <input 
+                            type="text" 
+                            class="form-control border-0 bg-transparent search-input"
+                            id="search-lg-input"
+                            placeholder="Search..."
+                            oninput="searchInput(this.value)"
+                            style="box-shadow:none;"
+                        >
+                        <button 
+                            type="button"
+                            class="btn p-0 position-absolute top-50 end-0 translate-middle-y"
+                            id="clearBtnForSearch"
+                            style="opacity:0; z-index:100; transition:opacity 0.2s;"
+                        >
+                            <i class="fas fa-times-circle" style="color: #aaa; font-size: 1.2rem; margin-right: 10px; margin-top: 1px;"></i>
+                        </button>
                     </div>
-                    <button class="btn position-absolute lg-search-hide" id="clearBtnForSearch"
-                        style="right: 0; top: 1.3px; cursor: pointer; z-index: 100;"><i
-                            class="bi bi-x-circle text-dark"></i></button>
                 </div>
-
                 <button class="btn btn-primary" style="border: 1px dashed #FF640A !important;">Login</button>
                 <button class="btn btn-primary mx-1" style="border: 1px dashed #FF640A !important;">Register</button>
-
             </div>
         </div>
 
@@ -96,11 +102,9 @@
         </div>
 
         <div class="search-nav-con p-2" id="search-nav-con">
-
-
             <div class="d-flex">
                 <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" style="border: 1px dashed #FF640A !important;"
+                    <button class="btn btn-primary dropdown-toggle match-search-box" style="border: 1px dashed #FF640A !important;"
                         type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Genre
                     </button>
@@ -125,16 +129,28 @@
 
                     </ul>
                 </div>
-                <div class="position-relative" style="flex-grow: 1;">
-                    <div class="input-group mx-1">
-                        <span class="input-group-text"><i class="bi bi-search"></i></span>
-                        <input type="text" class="form-control search-input" id="search-sm-input"
-                            placeholder="Search..." oninput="searchInput(this.value)">
-
+                <div class="modern-search-box position-relative me-3 mx-4">
+                    <div class="d-flex align-items-center bg-white rounded-4 shadow-sm border border-1 border-secondary" style="transition: border-color 0.3s, box-shadow 0.3s;">
+                        <div class="ps-3 pe-2 py-2">
+                            <i class="fas fa-search" style="color: #FF640A; font-size: 1rem;"></i>
+                        </div>
+                        <input 
+                            type="text" 
+                            class="form-control border-0 bg-transparent search-input"
+                            id="search-lg-input"
+                            placeholder="Search..."
+                            oninput="searchInput(this.value)"
+                            style="box-shadow:none;"
+                        >
+                        <button 
+                            type="button"
+                            class="btn p-0 position-absolute top-50 end-0 translate-middle-y"
+                            id="clearBtnForSearch"
+                            style="opacity:0; z-index:100; transition:opacity 0.2s;"
+                        >
+                            <i class="fas fa-times-circle" style="color: #aaa; font-size: 1.2rem; margin-right: 10px; margin-top: 1px;"></i>
+                        </button>
                     </div>
-                    <button class="btn position-absolute" id="clearBtnForSearchMobile"
-                        style="right: 0; top: 1.3px; cursor: pointer; z-index: 100;"><i
-                            class="bi bi-x-circle text-dark"></i></button>
                 </div>
             </div>
 
@@ -1370,20 +1386,17 @@
             <img src="statistic_bg.png" alt="Statistic background" class="statistic-bg" />
             <div class="statistic-box s-box-1">
                 <div class="statistic-value">
-                    <h4 class="d-inline statistic-value counter" data_ceil="24">24</h4>
-                    <h4 class="d-inline statistic-value">M+</h4>
+                    <h4 class="d-inline statistic-value counter" data_ceil="24">24</h4><h4 class="d-inline statistic-value">M+</h4>
                 </div>
             </div>
             <div class="statistic-box s-box-2">
                 <div class="statistic-value">
-                    <h4 class="d-inline statistic-value counter" data_ceil="155">155</h4>
-                    <h4 class="d-inline statistic-value">M</h4>
+                    <h4 class="d-inline statistic-value counter" data_ceil="155">155</h4><h4 class="d-inline statistic-value">M</h4>
                 </div>
             </div>
             <div class="statistic-box s-box-3">
                 <div class="statistic-value">
-                    <h4 class="d-inline statistic-value counter" data_ceil="900">900</h4>
-                    <h4 class="d-inline statistic-value">+</h4>
+                    <h4 class="d-inline statistic-value counter" data_ceil="900">900</h4><h4 class="d-inline statistic-value">+</h4>
                 </div>
             </div>
         </div>

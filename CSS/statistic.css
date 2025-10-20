@@ -17,103 +17,65 @@
     border-radius: 17px;
     margin-bottom: 70px;
 }
+
+
 .statistic-wrap {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
 }
+
 
 .statistic-bg {
-    padding-top: 30px;
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
+
 .statistic-box {
-    position: absolute;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
+
 .statistic-value {
-    margin: 0;
-    font-weight: 600;
-    color: #FF640A;
+  margin: 0;
+  font-weight: 600;
 }
+
 .s-box-1 {
-    left: 32%;
-    top: 33%;
+  left: 31.86%;
+  top: 29.5%;
 }
+
 .s-box-2 {
-    left: 46%;
-    top: 50%;
+  left: 46.1%;
+  top: 46.5%;
 }
+
 .s-box-3 {
-    left: 66.2%;
-    top: 28.5%;
+  left: 66%;
+  top: 24.7%;
 }
+
 @media (max-width: 440px) {
-    .statistic-value {
+    .statistic-value{
         scale: 0.7;
     }
 }
+
 @media (max-width: 576px) {
-    .statistic-box {
-        padding: 0.45rem 0.7rem;
-    }
-    .statistic-value {
-        font-size: 15px;
-    }
+  .statistic-box {
+    padding: 0.45rem 0.7rem;
+  }
+
+  .statistic-value {
+    font-size: 15px;
+  }
 }
+
 @media (min-width: 992px) {
-    .statistic-value {
-        font-size: 20px;
-    }
-}
-@media (max-width: 1000px) {
-    .statistic-box {
-        padding: 0.7rem 0.7rem;
-    }
-    .statistic-value {
-        font-size: 15px;
-    }
-}
-@media (max-width: 860px) {
-    .statistic-box {
-        padding: 0.7rem 0.7rem;
-    }
-    .statistic-value {
-        font-size: 14px;
-    }
-    .s-box-1 {
-    left: 32%;
-    top: 36%;
-    }
-    .s-box-2 {
-      left: 46%;
-      top: 51%;
-    }
-    .s-box-3 {
-      left: 66.2%;
-      top: 31%;
-    }
-}
-@media (max-width: 700px) {
-    .statistic-box {
-        padding: 0.7rem 0.7rem;
-    }
-    .statistic-value {
-        font-size: 12px;
-    }
-    .s-box-1 {
-    left: 32%;
-    top: 36.5%;
-    }
-    .s-box-2 {
-      left: 46%;
-      top: 51.5%;
-    }
-    .s-box-3 {
-      left: 66.2%;
-      top: 31.5%;
-    }
+  .statistic-value {
+    font-size: 20px;
+  }
 }
