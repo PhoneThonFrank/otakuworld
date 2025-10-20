@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtakuWorld</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Img/Otaku_World.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/statistic.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="upper-nav-con">
+            <div class="nav-left">
+                <a href="">
+                    <img src="./logo.png" alt="" width="105px">
+                </a>
+                <!-- Website -->
+
+                <div class="nav-large-menu mx-1">
+                    <a href="">Home</a>
+                    <a href="">Books</a>
+                    <a href="">About</a>
+                    <a href="">Contact</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="btn btn-primary mx-1 search-btn-nav" onclick="showHideSearchNavCon()">
+                    <i class="bi bi-search"></i>
+                </button>
+                <div class="dropdown lg-search-hide">
+                    <button class="btn btn-primary dropdown-toggle" style="border: 1px dashed #FF640A !important;"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Genre
+                    </button>
+                    <ul class="dropdown-menu">
+                        <div class="dropdown-custom-con">
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Adventure</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Action</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Comedy</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Drama</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Fantasy</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Historical</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Mystery</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Mecha</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Supernatural</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Slice of Life</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Science</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Sports</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Sci-Fi</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Psychological</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Post-Apocalyptic</button>
+                        </div>
+
+                    </ul>
+                </div>
+                <div class="position-relative me-3">
+                    <div class="input-group mx-1">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control search-input" id="search-lg-input"
+                            placeholder="Search..." oninput="searchInput(this.value)">
+
+                    </div>
+                    <button class="btn position-absolute lg-search-hide" id="clearBtnForSearch"
+                        style="right: 0; top: 1.3px; cursor: pointer; z-index: 100;"><i
+                            class="bi bi-x-circle text-dark"></i></button>
+                </div>
+
+                <button class="btn btn-primary" style="border: 1px dashed #FF640A !important;">Login</button>
+                <button class="btn btn-primary mx-1" style="border: 1px dashed #FF640A !important;">Register</button>
+
+            </div>
+        </div>
+
+        <div class="lower-nav-con py-2">
+            <div class="nav-large-menu text-center">
+                <a href="">Home</a>
+                <a href="">Books</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </div>
+        </div>
+
+        <div class="search-nav-con p-2" id="search-nav-con">
+
+
+            <div class="d-flex">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" style="border: 1px dashed #FF640A !important;"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Genre
+                    </button>
+                    <ul class="dropdown-menu">
+                        <div class="dropdown-custom-con">
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Adventure</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Action</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Comedy</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Drama</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Fantasy</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Historical</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Mystery</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Mecha</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Supernatural</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Slice of Life</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Science</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Sports</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Sci-Fi</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Psychological</button>
+                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Post-Apocalyptic</button>
+                        </div>
+
+                    </ul>
+                </div>
+                <div class="position-relative" style="flex-grow: 1;">
+                    <div class="input-group mx-1">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control search-input" id="search-sm-input"
+                            placeholder="Search..." oninput="searchInput(this.value)">
+
+                    </div>
+                    <button class="btn position-absolute" id="clearBtnForSearchMobile"
+                        style="right: 0; top: 1.3px; cursor: pointer; z-index: 100;"><i
+                            class="bi bi-x-circle text-dark"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <h2 class="section-title mt-3" id="searchResultText">Search Result</h2>
+    <!-- No result -->
+    <div id="no-result-con" class="d-none">
+        <h1 style="color: #FF640A; font-size: 80px;" class="text-center mt-3"><i class="bi bi-search"></i></h1>
+        <p style="color: #FF640A; font-size: 25px; text-align: center; margin-top: 20px;">
+            No result found
+        </p>
+
+    </div>
+
+    <section class="comic-section" id="carousel-section">
+        <div class="container">
+            <h2 class="section-title">Featured Comics & Manga</h2>
+            <div id="comicCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- First Slide -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <!-- Card 1 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Ao Ashi.jpg" class="card-img-top" alt="Ao Ashi">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Ao Ashi</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Sports / Slice of life</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/AOT.jpg" class="card-img-top" alt="Attack On Titan">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Attack On Titan</h5>
+                                            <p class="card-text mb-2">Action, Mystery</p>
+                                        </div>
+                                        <span class="genre-badge">Adventure, Mystery</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Battle Tendency.jpg" class="card-img-top"
+                                            alt="JoJo Part 2: Battle Tendency">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">JoJo Part 2: Battle Tendency</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Adventure / Action</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Beserk.jpg" class="card-img-top" alt="Berserk">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Berserk</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Dark Fantasy, Adventure</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Black Clover.jpg" class="card-img-top" alt="Black Clover">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Black Clover</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Fantasy / Adventure</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Bleach.jpg" class="card-img-top" alt="Bleach">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Bleach</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Supernatural / Adventure</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Slide -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- Card 7 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/blue lock.jpg" class="card-img-top" alt="Blue Lock">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Blue Lock</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Sport / Slice of Life</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 8 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Boruto The Next Generation.jpg" class="card-img-top"
+                                            alt="Boruto The Next Generation">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Boruto The Next Generation</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Action / Comedy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 9 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Boruto Two Blue Vortex.jpg" class="card-img-top"
+                                            alt="Boruto Two Blue Vortex">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Boruto Two Blue Vortex</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Action / Comedy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 10 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Chainsaw Man.jpg" class="card-img-top" alt="Chainsaw Man">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Chainsaw Man</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Action / Comedy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 11 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Climber.jpg" class="card-img-top" alt="Climber">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Climber</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Sport / Slice of life</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 12 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Dandadan.jpg" class="card-img-top" alt="Dandadan">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Dandadan</h5>
+                                            <p class="card-text mb-2">Manga</p>
+                                        </div>
+                                        <span class="genre-badge">Supernatural / Action</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#comicCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#comicCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!--End-->
+        <div class="m-5"></div>
+        <!--Carousel-->
+        <div class="container">
+            <h2 class="section-title">Popular Manhwa & Webtoons</h2>
+            <div id="comicCarousel2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- First Slide -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <!-- Card 1 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Viral Hit.jpg" class="card-img-top" alt="Viral Hit">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Viral Hit</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">Action / Comedy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Lookism.jpg" class="card-img-top" alt="Lookism">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Lookism</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">School Life / Supernatural</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Killer Peter.jpg" class="card-img-top" alt="Killer Peter">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Killer Peter</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">Action / Mystery</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/The Knight Only Lives Today.jpg" class="card-img-top"
+                                            alt="The Knight Only Lives Today">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">The Knight Only Lives Today</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">Action / Fantasy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/The World After Fall.jpg" class="card-img-top"
+                                            alt="The World After Fall">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">The World After Fall</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">Post-apocalyptic</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Omniscient Reader.jpg" class="card-img-top"
+                                            alt="Omniscient Reader">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Omniscient Reader</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">Adventure / Fantasy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Slide -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- Card 7 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Tears on a Withered flower.jpg" class="card-img-top"
+                                            alt="Tears on a Withered flower">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Tears on a Withered flower</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">Drama / Historical</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 8 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Questism.jpg" class="card-img-top" alt="Questism">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Questism</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">Action / Fantasy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 9 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Manager Kim.jpg" class="card-img-top" alt="Manager Kim">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Manager Kim</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">Comedy / Office Life</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 10 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Hand Jumper.jpg" class="card-img-top" alt="Hand Jumper">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Hand Jumper</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">Action / Fantasy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 11 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Honey Lemon.jpg" class="card-img-top" alt="Honey Lemon">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Honey Lemon</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">Comedy / Slice of Life</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 12 -->
+                            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                                <div class="comic-card">
+                                    <div class="card-img-container">
+                                        <img src="Img/Study Group.jpg" class="card-img-top" alt="Study Group">
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <h5 class="card-title">Study Group</h5>
+                                            <p class="card-text mb-2">Manhwa</p>
+                                        </div>
+                                        <span class="genre-badge">School Life / Slice of Life</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#comicCarousel2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#comicCarousel2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Search result container -->
+
+    <div class="container book-ctn my-3">
+        <div class="row g-4 comic_btn justify-content-center">
+
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Ao Ashi.jpg" class="card-img-top" alt="Ao Ashi">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Ao Ashi</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Sports / Slice of life</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/AOT.jpg" class="card-img-top" alt="Attack On Titan">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Attack On Titan</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure, Mystery</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Battle Tendency.jpg" class="card-img-top" alt="JoJo Part 2: Battle Tendency">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 2: Battle Tendency</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Beserk.jpg" class="card-img-top" alt="Berserk">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Berserk</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Dark Fantasy, Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Black Clover.jpg" class="card-img-top" alt="Black Clover">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Black Clover</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Fantasy / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Bleach.jpg" class="card-img-top" alt="Bleach">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Bleach</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/blue lock.jpg" class="card-img-top" alt="Blue Lock">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Blue Lock</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Sport / Slice of Life</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Boruto The Next Generation.jpg" class="card-img-top"
+                            alt="Boruto The Next Generation">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Boruto The Next Generation</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Boruto Two Blue Vortex.jpg" class="card-img-top" alt="Boruto Two Blue Vortex">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Boruto Two Blue Vortex</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Chainsaw Man.jpg" class="card-img-top" alt="Chainsaw Man">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Chainsaw Man</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Climber.jpg" class="card-img-top" alt="Climber">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Climber</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Sport / Slice of life</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Dandadan.jpg" class="card-img-top" alt="Dandadan">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Dandadan</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Death Note.jpg" class="card-img-top" alt="Death Note">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Death Note</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Mystery / Psychological</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Demon Slayer.jpg" class="card-img-top" alt="Demon Slayer">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Demon Slayer</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Diamond Is Unbreakable.jpg" class="card-img-top"
+                            alt="JoJo Part 4: Diamond Is Unbreakable">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 4: Diamond Is Unbreakable</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Dr. Stone.jpg" class="card-img-top" alt="Dr. Stone">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Dr. Stone</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Science</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Fire Force.jpg" class="card-img-top" alt="Fire Force">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Fire Force</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Gachiakuta.jpg" class="card-img-top" alt="Gachiakuta">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Gachiakuta</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Golden Wind.jpg" class="card-img-top" alt="JoJo Part 5: Golden Wing ">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 5: Golden Wing</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Haikyuu.jpg" class="card-img-top" alt="Haikyuu">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Haikyuu</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge"> Sports / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Homunculus.jpg" class="card-img-top" alt="Homunculus">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Homunculus</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Psychological / Horror</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/HxH.jpg" class="card-img-top" alt="HxH">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Hunter x Hunter</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Fantasy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/JoJolion.jpg" class="card-img-top" alt="JoJo Part 8: JoJolion">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 8: JoJolion</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Mystery / Drama</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Jujutsu Kaisen.jpg" class="card-img-top" alt="Jujutsu Kaisen">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Jujutsu Kaisen</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Jujutsu Kaisen Modulo.png" class="card-img-top" alt="Jujutsu Kaisen Modulo">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Jujutsu Kaisen Modulo</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/MHA.jpg" class="card-img-top" alt="My Hero Academia">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">My Hero Academia</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Superhero</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Naruto.jpg" class="card-img-top" alt="Naruto">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Naruto</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Naruto Shipudden.jpg" class="card-img-top" alt="Naruto Shippuden">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Naruto Shippuden</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Neon Genesis Evangelion.jpg" class="card-img-top" alt="Neon Genesis Evangelion">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Neon Genesis Evangelion</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Mecha / Sci-Fi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/One Piece.jpg" class="card-img-top" alt="One Piece">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">One Piece</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Phantom Blood.jpg" class="card-img-top" alt="JoJo Part 1: Phantom Blood ">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 1: Phantom Blood</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Record of Ragnarok.jpg" class="card-img-top" alt="Record of Ragnarok">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Record of Ragnarok</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Historical / Mythology</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Sakamoto Days.jpg" class="card-img-top" alt="Sakamoto Days">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Sakamoto Days</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Spy x family.jpg" class="card-img-top" alt="Spy × Family">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Spy × Family</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Fantasy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Stardust Crusaders.jpg" class="card-img-top"
+                            alt="JoJo Part 3: Stardust Crusaders">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 3: Stardust Crusaders</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Steel Ball Run.jpg" class="card-img-top" alt="JoJo Part 7: Steel Ball Run">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 7: Steel Ball Run</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Stone Ocean.jpg" class="card-img-top" alt="JoJo Part 1: Stone Ocean ">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 1: Stone Ocean</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/The JOJOlands.jpg" class="card-img-top" alt="JoJo Part 9: The JOJOLands">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 9: The JOJOLands</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/The Seven Deadly Sins.jpg" class="card-img-top" alt="The Seven Deadly Sins">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">The Seven Deadly Sins</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Fantasy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Tokyo Ghoul.jpg" class="card-img-top" alt="Tokyo Ghoul">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Tokyo Ghoul</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Horror / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Vagabond.jpg" class="card-img-top" alt="Vagabond">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Vagabond</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Historical / Martial Arts</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Vinland Saga.jpg" class="card-img-top" alt="Vinland Saga">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Vinland Saga</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Historical</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--End-->
+            <!--Cards-->
+
+
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Viral Hit.jpg" class="card-img-top" alt="Viral Hit">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Viral Hit</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">Action / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Lookism.jpg" class="card-img-top" alt="Lookism">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Lookism</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">School Life / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Killer Peter.jpg" class="card-img-top" alt="Killer Peter">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Killer Peter</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">Action / Mystery</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/The Knight Only Lives Today.jpg" class="card-img-top"
+                            alt="The Knight Only Lives Today">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">The Knight Only Lives Today</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">Action / Fantasy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/The World After Fall.jpg" class="card-img-top" alt="The World After Fall">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">The World After Fall</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">Post-apocalyptic</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Omniscient Reader.jpg" class="card-img-top" alt="Omniscient Reader">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Omniscient Reader</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Fantasy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Tears on a Withered flower.jpg" class="card-img-top"
+                            alt="Tears on a Withered flower">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Tears on a Withered flower</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">Drama / Historical</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Questism.jpg" class="card-img-top" alt="Questism">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Questism</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">Action / Fantasy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Manager Kim.jpg" class="card-img-top" alt="Manager Kim">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Manager Kim</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">Comedy / Office Life</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Hand Jumper.jpg" class="card-img-top" alt="Hand Jumper">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Hand Jumper</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">Action / Fantasy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Honey Lemon.jpg" class="card-img-top" alt="Honey Lemon">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Honey Lemon</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">Comedy / Slice of Life</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Study Group.jpg" class="card-img-top" alt="Study Group">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Study Group</h5>
+                            <p class="card-text mb-2">Manhwa</p>
+                        </div>
+                        <span class="genre-badge">School Life / Slice of Life</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+
+    </div>
+
+
+
+
+
+    <!--Statistic-->
+    <div class="container-fluid main-ctn">
+        <div class="statistic-wrap mx-auto">
+            <img src="statistic_bg.png" alt="Statistic background" class="statistic-bg" />
+            <div class="statistic-box s-box-1">
+                <div class="statistic-value">
+                    <h4 class="d-inline statistic-value counter" data_ceil="24">24</h4>
+                    <h4 class="d-inline statistic-value">M+</h4>
+                </div>
+            </div>
+            <div class="statistic-box s-box-2">
+                <div class="statistic-value">
+                    <h4 class="d-inline statistic-value counter" data_ceil="155">155</h4>
+                    <h4 class="d-inline statistic-value">M</h4>
+                </div>
+            </div>
+            <div class="statistic-box s-box-3">
+                <div class="statistic-value">
+                    <h4 class="d-inline statistic-value counter" data_ceil="900">900</h4>
+                    <h4 class="d-inline statistic-value">+</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Statistic-->
+    <!--Cards-->
+    <!--Cards-->
+    <!--Cards-->
+    <div class="container book-ctn">
+        <h2 class="section-title my-5">Featured Comics & Manga</h2>
+        <div class="row g-4 comic_btn">
+
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Ao Ashi.jpg" class="card-img-top" alt="Ao Ashi">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Ao Ashi</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Sports / Slice of life</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/AOT.jpg" class="card-img-top" alt="Attack On Titan">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Attack On Titan</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure, Mystery</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Battle Tendency.jpg" class="card-img-top" alt="JoJo Part 2: Battle Tendency">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 2: Battle Tendency</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Beserk.jpg" class="card-img-top" alt="Berserk">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Berserk</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Dark Fantasy, Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Black Clover.jpg" class="card-img-top" alt="Black Clover">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Black Clover</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Fantasy / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Bleach.jpg" class="card-img-top" alt="Bleach">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Bleach</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/blue lock.jpg" class="card-img-top" alt="Blue Lock">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Blue Lock</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Sport / Slice of Life</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Boruto The Next Generation.jpg" class="card-img-top"
+                            alt="Boruto The Next Generation">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Boruto The Next Generation</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Boruto Two Blue Vortex.jpg" class="card-img-top" alt="Boruto Two Blue Vortex">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Boruto Two Blue Vortex</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Chainsaw Man.jpg" class="card-img-top" alt="Chainsaw Man">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Chainsaw Man</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Climber.jpg" class="card-img-top" alt="Climber">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Climber</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Sport / Slice of life</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Dandadan.jpg" class="card-img-top" alt="Dandadan">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Dandadan</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Death Note.jpg" class="card-img-top" alt="Death Note">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Death Note</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Mystery / Psychological</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Demon Slayer.jpg" class="card-img-top" alt="Demon Slayer">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Demon Slayer</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Diamond Is Unbreakable.jpg" class="card-img-top"
+                            alt="JoJo Part 4: Diamond Is Unbreakable">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 4: Diamond Is Unbreakable</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Dr. Stone.jpg" class="card-img-top" alt="Dr. Stone">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Dr. Stone</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Science</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Fire Force.jpg" class="card-img-top" alt="Fire Force">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Fire Force</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Gachiakuta.jpg" class="card-img-top" alt="Gachiakuta">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Gachiakuta</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Golden Wind.jpg" class="card-img-top" alt="JoJo Part 5: Golden Wing ">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 5: Golden Wing</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Haikyuu.jpg" class="card-img-top" alt="Haikyuu">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Haikyuu</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge"> Sports / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Homunculus.jpg" class="card-img-top" alt="Homunculus">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Homunculus</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Psychological / Horror</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/HxH.jpg" class="card-img-top" alt="HxH">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Hunter x Hunter</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Fantasy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/JoJolion.jpg" class="card-img-top" alt="JoJo Part 8: JoJolion">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 8: JoJolion</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Mystery / Drama</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Jujutsu Kaisen.jpg" class="card-img-top" alt="Jujutsu Kaisen">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Jujutsu Kaisen</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Jujutsu Kaisen Modulo.png" class="card-img-top" alt="Jujutsu Kaisen Modulo">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Jujutsu Kaisen Modulo</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/MHA.jpg" class="card-img-top" alt="My Hero Academia">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">My Hero Academia</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Superhero</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Naruto.jpg" class="card-img-top" alt="Naruto">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Naruto</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Naruto Shipudden.jpg" class="card-img-top" alt="Naruto Shippuden">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Naruto Shippuden</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Neon Genesis Evangelion.jpg" class="card-img-top" alt="Neon Genesis Evangelion">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Neon Genesis Evangelion</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Mecha / Sci-Fi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/One Piece.jpg" class="card-img-top" alt="One Piece">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">One Piece</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Phantom Blood.jpg" class="card-img-top" alt="JoJo Part 1: Phantom Blood ">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 1: Phantom Blood</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Record of Ragnarok.jpg" class="card-img-top" alt="Record of Ragnarok">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Record of Ragnarok</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Historical / Mythology</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Sakamoto Days.jpg" class="card-img-top" alt="Sakamoto Days">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Sakamoto Days</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Comedy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Spy x family.jpg" class="card-img-top" alt="Spy × Family">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Spy × Family</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Fantasy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Stardust Crusaders.jpg" class="card-img-top"
+                            alt="JoJo Part 3: Stardust Crusaders">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 3: Stardust Crusaders</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Steel Ball Run.jpg" class="card-img-top" alt="JoJo Part 7: Steel Ball Run">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 7: Steel Ball Run</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Supernatural / Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Stone Ocean.jpg" class="card-img-top" alt="JoJo Part 1: Stone Ocean ">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 1: Stone Ocean</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/The JOJOlands.jpg" class="card-img-top" alt="JoJo Part 9: The JOJOLands">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">JoJo Part 9: The JOJOLands</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/The Seven Deadly Sins.jpg" class="card-img-top" alt="The Seven Deadly Sins">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">The Seven Deadly Sins</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Adventure / Fantasy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Tokyo Ghoul.jpg" class="card-img-top" alt="Tokyo Ghoul">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Tokyo Ghoul</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Horror / Supernatural</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Vagabond.jpg" class="card-img-top" alt="Vagabond">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Vagabond</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Historical / Martial Arts</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="comic-card">
+                    <div class="card-img-container">
+                        <img src="Img/Vinland Saga.jpg" class="card-img-top" alt="Vinland Saga">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title">Vinland Saga</h5>
+                            <p class="card-text mb-2">Manga</p>
+                        </div>
+                        <span class="genre-badge">Action / Historical</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End-->
+        <!--Cards-->
+        <div class="container-fluid my-5 book-ctn">
+            <div class="row g-4 comic_btn">
+                <h2 class="section-title my-5">Popular Manhwa & Webtoons</h2>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/Viral Hit.jpg" class="card-img-top" alt="Viral Hit">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">Viral Hit</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">Action / Comedy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/Lookism.jpg" class="card-img-top" alt="Lookism">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">Lookism</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">School Life / Supernatural</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/Killer Peter.jpg" class="card-img-top" alt="Killer Peter">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">Killer Peter</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">Action / Mystery</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/The Knight Only Lives Today.jpg" class="card-img-top"
+                                alt="The Knight Only Lives Today">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">The Knight Only Lives Today</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">Action / Fantasy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/The World After Fall.jpg" class="card-img-top" alt="The World After Fall">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">The World After Fall</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">Post-apocalyptic</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/Omniscient Reader.jpg" class="card-img-top" alt="Omniscient Reader">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">Omniscient Reader</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">Adventure / Fantasy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/Tears on a Withered flower.jpg" class="card-img-top"
+                                alt="Tears on a Withered flower">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">Tears on a Withered flower</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">Drama / Historical</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/Questism.jpg" class="card-img-top" alt="Questism">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">Questism</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">Action / Fantasy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/Manager Kim.jpg" class="card-img-top" alt="Manager Kim">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">Manager Kim</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">Comedy / Office Life</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/Hand Jumper.jpg" class="card-img-top" alt="Hand Jumper">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">Hand Jumper</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">Action / Fantasy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/Honey Lemon.jpg" class="card-img-top" alt="Honey Lemon">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">Honey Lemon</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">Comedy / Slice of Life</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                    <div class="comic-card">
+                        <div class="card-img-container">
+                            <img src="Img/Study Group.jpg" class="card-img-top" alt="Study Group">
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title">Study Group</h5>
+                                <p class="card-text mb-2">Manhwa</p>
+                            </div>
+                            <span class="genre-badge">School Life / Slice of Life</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+
+    </div>
+
+    <footer class="footer">
+        <!-- Social Media Icons -->
+        <div class="social-icons mb-3">
+            <a href="#"><i class="bi bi-facebook text-primary"></i></a>
+            <a href="#"><i class="bi bi-instagram text-danger"></i></a>
+            <a href="#"><i class="bi bi-twitter-x text-dark"></i></a>
+            <a href="#"><i class="bi bi-youtube text-danger"></i></a>
+        </div>
+        <!-- Footer Links + Dropdown in one line -->
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Home</a>|
+                <a href="#">Books</a>|
+                <a href="#">About</a>|
+                <a href="#">Contact</a>|
+                <a href="#">Privacy</a>|
+                <a href="#">Terms</a>
+            </div>
+            <select aria-label="Language select">
+                <option selected>English</option>
+                <option value="1">Spanish</option>
+                <option value="2">French</option>
+            </select>
+        </div>
+        <!-- Logo -->
+        <div class="footer-logo">
+            <img src="logo.png" alt="logo" width="100px">
+        </div>
+        <div class="text-muted mt-5">&copy; OTAKU WORLD Ltd.</div>
+    </footer>
+
+    <!--End-->
+    <!-- Bootstrap JS -->
+    <script src="statistic.js"></script>
+    <script src="navbar.js"></script>
+    <script src="script.js"></script>
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>

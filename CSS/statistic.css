@@ -1,0 +1,119 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main-ctn {
+    background: #FF640A;
+    background: linear-gradient(280deg, rgba(255, 100, 10, 0.07) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 100, 10, 0.07) 100%);
+    box-shadow: rgba(255, 100, 10, 0.15) -5px 5px, 
+            rgba(255, 100, 10, 0.1) -10px 10px, 
+            rgba(255, 100, 10, 0.07) -15px 15px, 
+            rgba(255, 100, 10, 0.04) -20px 20px, 
+            rgba(255, 100, 10, 0.02) -25px 25px;
+            
+    max-width: 1500px;
+    border-radius: 17px;
+    margin-bottom: 70px;
+}
+.statistic-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.statistic-bg {
+    padding-top: 30px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.statistic-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.statistic-value {
+    margin: 0;
+    font-weight: 600;
+    color: #FF640A;
+}
+.s-box-1 {
+    left: 32%;
+    top: 33%;
+}
+.s-box-2 {
+    left: 46%;
+    top: 50%;
+}
+.s-box-3 {
+    left: 66.2%;
+    top: 28.5%;
+}
+@media (max-width: 440px) {
+    .statistic-value {
+        scale: 0.7;
+    }
+}
+@media (max-width: 576px) {
+    .statistic-box {
+        padding: 0.45rem 0.7rem;
+    }
+    .statistic-value {
+        font-size: 15px;
+    }
+}
+@media (min-width: 992px) {
+    .statistic-value {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1000px) {
+    .statistic-box {
+        padding: 0.7rem 0.7rem;
+    }
+    .statistic-value {
+        font-size: 15px;
+    }
+}
+@media (max-width: 860px) {
+    .statistic-box {
+        padding: 0.7rem 0.7rem;
+    }
+    .statistic-value {
+        font-size: 14px;
+    }
+    .s-box-1 {
+    left: 32%;
+    top: 36%;
+    }
+    .s-box-2 {
+      left: 46%;
+      top: 51%;
+    }
+    .s-box-3 {
+      left: 66.2%;
+      top: 31%;
+    }
+}
+@media (max-width: 700px) {
+    .statistic-box {
+        padding: 0.7rem 0.7rem;
+    }
+    .statistic-value {
+        font-size: 12px;
+    }
+    .s-box-1 {
+    left: 32%;
+    top: 36.5%;
+    }
+    .s-box-2 {
+      left: 46%;
+      top: 51.5%;
+    }
+    .s-box-3 {
+      left: 66.2%;
+      top: 31.5%;
+    }
+}

@@ -1,0 +1,152 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #fee4d6a5;
+    backdrop-filter: blur(20px);
+    color: #FF640A !important;
+    z-index: 100;
+}
+
+.upper-nav-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    /* background-color: red; */
+    padding: 0 50px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    color: #FF640A;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-large-menu a {
+    text-decoration: none;
+    color: #FF640A;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 15px;
+}
+
+.nav-large-menu a:hover {
+     color: #ae460a;
+}
+
+.nav-right {
+    display: flex;
+}
+
+@media screen and (max-width: 1010px) {
+    nav .nav-left .nav-large-menu a {
+        margin: 0 10px;
+    }
+
+    .upper-nav-con {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    nav .nav-left .nav-large-menu a {
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    nav .nav-left .nav-large-menu {
+        display: none;
+    }
+
+    .lower-nav-con {
+        display: block !important;
+    }
+
+    .lower-nav-con .nav-large-menu a {
+        margin: 0 2px;
+    }
+}
+
+.lower-nav-con {
+    /* background-color: blue; */
+    display: none;
+}
+
+.search-nav-con {
+    /* background-color: orange; */
+    display: none;
+    animation-duration: 0.7s;
+}
+
+@media screen and (max-width: 640px) {
+    nav .nav-right .input-group {
+        display: none;
+    }
+
+    .lg-search-hide {
+        display: none !important;
+    }
+
+    .search-btn-nav {
+        display: block !important;
+    }
+
+    .upper-nav-con {
+        padding: 0 5px;
+    }
+}
+
+.search-btn-nav {
+    display: none;
+}
+
+@keyframes grow {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes shrink {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 0;
+        display: none;
+    }
+}
+
+.btn-primary {
+    background-color: #FF640A !important;
+    border: 1px solid white !important;
+}
+
+.btn-primary:hover {
+    background-color: #de5607 !important;
+}
+
+.form-control {
+    border: 1px dashed #FF640A !important;
+    background-color: #ff640a17 !important;
+}
+
+.input-group-text{
+    background-color: #FF640A !important;
+    border: 1px dashed #FF640A !important;
+    color: white !important;
+}
+
