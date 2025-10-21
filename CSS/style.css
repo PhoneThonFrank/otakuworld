@@ -257,9 +257,12 @@ body {
     display: flex !important;
     flex-wrap: wrap;
     width: 290px !important;
-    overflow: scroll;
+    max-height: 400px !important;
+    overflow-x: none !important;
+    overflow-y: scroll !important;
     padding: 1px 5px;
     justify-content: center;
+    
 }
 
 .dropdown-menu button {
@@ -267,10 +270,9 @@ body {
     width: 135px;
 }
 
-.dropdown-custom-con > :last-child {
-    flex-grow: 1;
-}
-
+/*.dropdown-custom-con > :last-child {
+    /*flex-grow: 1;
+}*/
 .no-result-con{
     font-size: large;
     color: #FF640A;
