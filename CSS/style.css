@@ -38,10 +38,11 @@ body {
 }
 
 .section-title {
-    color: var(--orange-color);
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-    text-align: center;
+    color: var(--orange-color) !important;
+    font-weight: 700 !important;
+    font-size: 30px;
+    margin-bottom: 2.5rem !important;
+    text-align: center !important;
 }
 
 /* Card Customization */
@@ -81,11 +82,17 @@ body {
     display: flex;
     flex-direction: column;
     animation-duration: 0.7s;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .comic-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.comic-card:active {
+    scale: 0.9;
 }
 
 .card-img-container {
@@ -262,7 +269,7 @@ body {
     overflow-y: scroll !important;
     padding: 1px 5px;
     justify-content: center;
-    
+
 }
 
 .dropdown-menu button {
@@ -273,7 +280,37 @@ body {
 /*.dropdown-custom-con > :last-child {
     /*flex-grow: 1;
 }*/
-.no-result-con{
+.no-result-con {
     font-size: large;
     color: #FF640A;
+}
+
+.comic-card {
+    transition: all 0.3s ease;
+}
+
+.comic-card:hover {
+    transform: translateY(-4px);
+}
+
+/* .modal-overlay {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #FF640A;
+    border-radius: 2px;
+} */ 
+
+.comicModalDialog{
+    max-width: 900px;
+    margin: auto;
 }

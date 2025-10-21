@@ -18,9 +18,44 @@
     <link rel="stylesheet" href="CSS/statistic.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/navbar.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
+<!-- Modal -->
+ <div class="modal fade" id="comicModal" tabindex="-1" aria-labelledby="comicModalLabel" aria-hidden="true">
+  <div class="modal-dialog comicModalDialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+        <h1 class="modal-title fs-5" id="comicModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body" id="myLovelyModalBody">
+        ...
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+    <!-- Modal -->
+    <!-- <div id="comicModal" class="fixed inset-0  inset-0 z-[9999] hidden">
+        <div class="modal-overlay absolute inset-0 animate-fade-in"></div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div id="modalContent" class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden animate-slide-up">
+                Modal content will be populated by JavaScript
+            </div>
+        </div>
+    </div> -->
+
+
+
 
     <!-- Navbar -->
     <nav>
@@ -200,7 +235,8 @@
                         <div class="row">
                             <!-- Card 1 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Ao Ashi.jpg" class="card-img-top" alt="Ao Ashi">
                                     </div>
@@ -215,7 +251,8 @@
                             </div>
                             <!-- Card 2 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/AOT.jpg" class="card-img-top" alt="Attack On Titan">
                                     </div>
@@ -230,7 +267,8 @@
                             </div>
                             <!-- Card 3 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Battle Tendency.jpg" class="card-img-top"
                                             alt="JoJo Part 2: Battle Tendency">
@@ -246,7 +284,8 @@
                             </div>
                             <!-- Card 4 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Beserk.jpg" class="card-img-top" alt="Berserk">
                                     </div>
@@ -261,7 +300,8 @@
                             </div>
                             <!-- Card 5 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Black Clover.jpg" class="card-img-top" alt="Black Clover">
                                     </div>
@@ -276,7 +316,8 @@
                             </div>
                             <!-- Card 6 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Bleach.jpg" class="card-img-top" alt="Bleach">
                                     </div>
@@ -296,7 +337,8 @@
                         <div class="row">
                             <!-- Card 7 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/blue lock.jpg" class="card-img-top" alt="Blue Lock">
                                     </div>
@@ -305,13 +347,14 @@
                                             <h5 class="card-title">Blue Lock</h5>
                                             <p class="card-text mb-2">Manga</p>
                                         </div>
-                                        <span class="genre-badge">Sport / Slice of Life</span>
+                                        <span class="genre-badge">Sports / Slice of Life</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Card 8 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Boruto The Next Generation.jpg" class="card-img-top"
                                             alt="Boruto The Next Generation">
@@ -327,7 +370,8 @@
                             </div>
                             <!-- Card 9 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Boruto Two Blue Vortex.jpg" class="card-img-top"
                                             alt="Boruto Two Blue Vortex">
@@ -343,7 +387,8 @@
                             </div>
                             <!-- Card 10 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Chainsaw Man.jpg" class="card-img-top" alt="Chainsaw Man">
                                     </div>
@@ -358,7 +403,8 @@
                             </div>
                             <!-- Card 11 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Climber.jpg" class="card-img-top" alt="Climber">
                                     </div>
@@ -373,7 +419,8 @@
                             </div>
                             <!-- Card 12 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Dandadan.jpg" class="card-img-top" alt="Dandadan">
                                     </div>
@@ -414,7 +461,8 @@
                         <div class="row">
                             <!-- Card 1 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Viral Hit.jpg" class="card-img-top" alt="Viral Hit">
                                     </div>
@@ -429,7 +477,8 @@
                             </div>
                             <!-- Card 2 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Lookism.jpg" class="card-img-top" alt="Lookism">
                                     </div>
@@ -444,7 +493,8 @@
                             </div>
                             <!-- Card 3 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Killer Peter.jpg" class="card-img-top" alt="Killer Peter">
                                     </div>
@@ -459,7 +509,8 @@
                             </div>
                             <!-- Card 4 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/The Knight Only Lives Today.jpg" class="card-img-top"
                                             alt="The Knight Only Lives Today">
@@ -475,7 +526,8 @@
                             </div>
                             <!-- Card 5 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/The World After Fall.jpg" class="card-img-top"
                                             alt="The World After Fall">
@@ -491,7 +543,8 @@
                             </div>
                             <!-- Card 6 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Omniscient Reader.jpg" class="card-img-top"
                                             alt="Omniscient Reader">
@@ -512,7 +565,8 @@
                         <div class="row">
                             <!-- Card 7 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Tears on a Withered flower.jpg" class="card-img-top"
                                             alt="Tears on a Withered flower">
@@ -528,7 +582,8 @@
                             </div>
                             <!-- Card 8 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Questism.jpg" class="card-img-top" alt="Questism">
                                     </div>
@@ -543,7 +598,8 @@
                             </div>
                             <!-- Card 9 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Manager Kim.jpg" class="card-img-top" alt="Manager Kim">
                                     </div>
@@ -558,7 +614,8 @@
                             </div>
                             <!-- Card 10 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Hand Jumper.jpg" class="card-img-top" alt="Hand Jumper">
                                     </div>
@@ -573,7 +630,8 @@
                             </div>
                             <!-- Card 11 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Honey Lemon.jpg" class="card-img-top" alt="Honey Lemon">
                                     </div>
@@ -588,7 +646,8 @@
                             </div>
                             <!-- Card 12 -->
                             <div class="col-6 col-md-4 col-lg-2 mb-4">
-                                <div class="comic-card">
+                                <div class="comic-card" onclick="showModal(this)">
+                                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                                     <div class="card-img-container">
                                         <img src="Img/Study Group.jpg" class="card-img-top" alt="Study Group">
                                     </div>
@@ -628,7 +687,8 @@
         <div class="row g-4 comic_btn justify-content-center">
 
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Ao Ashi.jpg" class="card-img-top" alt="Ao Ashi">
                     </div>
@@ -642,7 +702,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/AOT.jpg" class="card-img-top" alt="Attack On Titan">
                     </div>
@@ -656,7 +717,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Battle Tendency.jpg" class="card-img-top" alt="JoJo Part 2: Battle Tendency">
                     </div>
@@ -670,7 +732,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Beserk.jpg" class="card-img-top" alt="Berserk">
                     </div>
@@ -684,7 +747,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Black Clover.jpg" class="card-img-top" alt="Black Clover">
                     </div>
@@ -698,7 +762,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Bleach.jpg" class="card-img-top" alt="Bleach">
                     </div>
@@ -712,7 +777,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/blue lock.jpg" class="card-img-top" alt="Blue Lock">
                     </div>
@@ -721,12 +787,13 @@
                             <h5 class="card-title">Blue Lock</h5>
                             <p class="card-text mb-2">Manga</p>
                         </div>
-                        <span class="genre-badge">Sport / Slice of Life</span>
+                        <span class="genre-badge">Sports / Slice of Life</span>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Boruto The Next Generation.jpg" class="card-img-top"
                             alt="Boruto The Next Generation">
@@ -741,7 +808,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Boruto Two Blue Vortex.jpg" class="card-img-top" alt="Boruto Two Blue Vortex">
                     </div>
@@ -755,7 +823,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Chainsaw Man.jpg" class="card-img-top" alt="Chainsaw Man">
                     </div>
@@ -769,7 +838,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Climber.jpg" class="card-img-top" alt="Climber">
                     </div>
@@ -783,7 +853,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Dandadan.jpg" class="card-img-top" alt="Dandadan">
                     </div>
@@ -797,7 +868,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Death Note.jpg" class="card-img-top" alt="Death Note">
                     </div>
@@ -811,7 +883,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Demon Slayer.jpg" class="card-img-top" alt="Demon Slayer">
                     </div>
@@ -825,7 +898,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Diamond Is Unbreakable.jpg" class="card-img-top"
                             alt="JoJo Part 4: Diamond Is Unbreakable">
@@ -840,7 +914,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Dr. Stone.jpg" class="card-img-top" alt="Dr. Stone">
                     </div>
@@ -854,7 +929,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Fire Force.jpg" class="card-img-top" alt="Fire Force">
                     </div>
@@ -868,7 +944,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Gachiakuta.jpg" class="card-img-top" alt="Gachiakuta">
                     </div>
@@ -882,7 +959,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Golden Wind.jpg" class="card-img-top" alt="JoJo Part 5: Golden Wing ">
                     </div>
@@ -896,7 +974,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Haikyuu.jpg" class="card-img-top" alt="Haikyuu">
                     </div>
@@ -910,7 +989,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Homunculus.jpg" class="card-img-top" alt="Homunculus">
                     </div>
@@ -924,7 +1004,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/HxH.jpg" class="card-img-top" alt="HxH">
                     </div>
@@ -938,7 +1019,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/JoJolion.jpg" class="card-img-top" alt="JoJo Part 8: JoJolion">
                     </div>
@@ -952,7 +1034,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Jujutsu Kaisen.jpg" class="card-img-top" alt="Jujutsu Kaisen">
                     </div>
@@ -966,7 +1049,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Jujutsu Kaisen Modulo.png" class="card-img-top" alt="Jujutsu Kaisen Modulo">
                     </div>
@@ -980,7 +1064,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/MHA.jpg" class="card-img-top" alt="My Hero Academia">
                     </div>
@@ -994,7 +1079,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Naruto.jpg" class="card-img-top" alt="Naruto">
                     </div>
@@ -1008,7 +1094,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Naruto Shipudden.jpg" class="card-img-top" alt="Naruto Shippuden">
                     </div>
@@ -1022,7 +1109,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Neon Genesis Evangelion.jpg" class="card-img-top" alt="Neon Genesis Evangelion">
                     </div>
@@ -1036,7 +1124,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/One Piece.jpg" class="card-img-top" alt="One Piece">
                     </div>
@@ -1050,7 +1139,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Phantom Blood.jpg" class="card-img-top" alt="JoJo Part 1: Phantom Blood ">
                     </div>
@@ -1064,7 +1154,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Record of Ragnarok.jpg" class="card-img-top" alt="Record of Ragnarok">
                     </div>
@@ -1078,7 +1169,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Sakamoto Days.jpg" class="card-img-top" alt="Sakamoto Days">
                     </div>
@@ -1092,7 +1184,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Spy x family.jpg" class="card-img-top" alt="Spy × Family">
                     </div>
@@ -1106,7 +1199,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Stardust Crusaders.jpg" class="card-img-top"
                             alt="JoJo Part 3: Stardust Crusaders">
@@ -1121,7 +1215,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Steel Ball Run.jpg" class="card-img-top" alt="JoJo Part 7: Steel Ball Run">
                     </div>
@@ -1135,7 +1230,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Stone Ocean.jpg" class="card-img-top" alt="JoJo Part 1: Stone Ocean ">
                     </div>
@@ -1149,7 +1245,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/The JOJOlands.jpg" class="card-img-top" alt="JoJo Part 9: The JOJOLands">
                     </div>
@@ -1163,7 +1260,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/The Seven Deadly Sins.jpg" class="card-img-top" alt="The Seven Deadly Sins">
                     </div>
@@ -1177,7 +1275,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Tokyo Ghoul.jpg" class="card-img-top" alt="Tokyo Ghoul">
                     </div>
@@ -1191,7 +1290,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Vagabond.jpg" class="card-img-top" alt="Vagabond">
                     </div>
@@ -1205,7 +1305,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Vinland Saga.jpg" class="card-img-top" alt="Vinland Saga">
                     </div>
@@ -1224,7 +1325,8 @@
 
 
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Viral Hit.jpg" class="card-img-top" alt="Viral Hit">
                     </div>
@@ -1238,7 +1340,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Lookism.jpg" class="card-img-top" alt="Lookism">
                     </div>
@@ -1252,7 +1355,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Killer Peter.jpg" class="card-img-top" alt="Killer Peter">
                     </div>
@@ -1266,7 +1370,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/The Knight Only Lives Today.jpg" class="card-img-top"
                             alt="The Knight Only Lives Today">
@@ -1281,7 +1386,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/The World After Fall.jpg" class="card-img-top" alt="The World After Fall">
                     </div>
@@ -1295,7 +1401,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Omniscient Reader.jpg" class="card-img-top" alt="Omniscient Reader">
                     </div>
@@ -1309,7 +1416,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Tears on a Withered flower.jpg" class="card-img-top"
                             alt="Tears on a Withered flower">
@@ -1324,7 +1432,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Questism.jpg" class="card-img-top" alt="Questism">
                     </div>
@@ -1338,7 +1447,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Manager Kim.jpg" class="card-img-top" alt="Manager Kim">
                     </div>
@@ -1352,7 +1462,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Hand Jumper.jpg" class="card-img-top" alt="Hand Jumper">
                     </div>
@@ -1366,7 +1477,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Honey Lemon.jpg" class="card-img-top" alt="Honey Lemon">
                     </div>
@@ -1380,7 +1492,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 comic-container">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Study Group.jpg" class="card-img-top" alt="Study Group">
                     </div>
@@ -1433,7 +1546,8 @@
         <div class="row g-4 comic_btn">
 
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Ao Ashi.jpg" class="card-img-top" alt="Ao Ashi">
                     </div>
@@ -1447,7 +1561,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/AOT.jpg" class="card-img-top" alt="Attack On Titan">
                     </div>
@@ -1461,7 +1576,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Battle Tendency.jpg" class="card-img-top" alt="JoJo Part 2: Battle Tendency">
                     </div>
@@ -1475,7 +1591,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Beserk.jpg" class="card-img-top" alt="Berserk">
                     </div>
@@ -1489,7 +1606,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Black Clover.jpg" class="card-img-top" alt="Black Clover">
                     </div>
@@ -1503,7 +1621,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Bleach.jpg" class="card-img-top" alt="Bleach">
                     </div>
@@ -1517,7 +1636,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/blue lock.jpg" class="card-img-top" alt="Blue Lock">
                     </div>
@@ -1526,12 +1646,13 @@
                             <h5 class="card-title">Blue Lock</h5>
                             <p class="card-text mb-2">Manga</p>
                         </div>
-                        <span class="genre-badge">Sport / Slice of Life</span>
+                        <span class="genre-badge">Sports / Slice of Life</span>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Boruto The Next Generation.jpg" class="card-img-top"
                             alt="Boruto The Next Generation">
@@ -1546,7 +1667,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Boruto Two Blue Vortex.jpg" class="card-img-top" alt="Boruto Two Blue Vortex">
                     </div>
@@ -1560,7 +1682,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Chainsaw Man.jpg" class="card-img-top" alt="Chainsaw Man">
                     </div>
@@ -1574,7 +1697,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Climber.jpg" class="card-img-top" alt="Climber">
                     </div>
@@ -1588,7 +1712,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Dandadan.jpg" class="card-img-top" alt="Dandadan">
                     </div>
@@ -1602,7 +1727,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Death Note.jpg" class="card-img-top" alt="Death Note">
                     </div>
@@ -1616,7 +1742,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Demon Slayer.jpg" class="card-img-top" alt="Demon Slayer">
                     </div>
@@ -1630,7 +1757,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Diamond Is Unbreakable.jpg" class="card-img-top"
                             alt="JoJo Part 4: Diamond Is Unbreakable">
@@ -1645,7 +1773,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Dr. Stone.jpg" class="card-img-top" alt="Dr. Stone">
                     </div>
@@ -1659,7 +1788,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Fire Force.jpg" class="card-img-top" alt="Fire Force">
                     </div>
@@ -1673,7 +1803,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Gachiakuta.jpg" class="card-img-top" alt="Gachiakuta">
                     </div>
@@ -1687,7 +1818,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Golden Wind.jpg" class="card-img-top" alt="JoJo Part 5: Golden Wing ">
                     </div>
@@ -1701,7 +1833,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Haikyuu.jpg" class="card-img-top" alt="Haikyuu">
                     </div>
@@ -1715,7 +1848,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Homunculus.jpg" class="card-img-top" alt="Homunculus">
                     </div>
@@ -1729,7 +1863,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/HxH.jpg" class="card-img-top" alt="HxH">
                     </div>
@@ -1743,7 +1878,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/JoJolion.jpg" class="card-img-top" alt="JoJo Part 8: JoJolion">
                     </div>
@@ -1757,7 +1893,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Jujutsu Kaisen.jpg" class="card-img-top" alt="Jujutsu Kaisen">
                     </div>
@@ -1771,7 +1908,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Jujutsu Kaisen Modulo.png" class="card-img-top" alt="Jujutsu Kaisen Modulo">
                     </div>
@@ -1785,7 +1923,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/MHA.jpg" class="card-img-top" alt="My Hero Academia">
                     </div>
@@ -1799,7 +1938,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Naruto.jpg" class="card-img-top" alt="Naruto">
                     </div>
@@ -1813,7 +1953,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Naruto Shipudden.jpg" class="card-img-top" alt="Naruto Shippuden">
                     </div>
@@ -1827,7 +1968,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Neon Genesis Evangelion.jpg" class="card-img-top" alt="Neon Genesis Evangelion">
                     </div>
@@ -1841,7 +1983,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/One Piece.jpg" class="card-img-top" alt="One Piece">
                     </div>
@@ -1855,7 +1998,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Phantom Blood.jpg" class="card-img-top" alt="JoJo Part 1: Phantom Blood ">
                     </div>
@@ -1869,7 +2013,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Record of Ragnarok.jpg" class="card-img-top" alt="Record of Ragnarok">
                     </div>
@@ -1883,7 +2028,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Sakamoto Days.jpg" class="card-img-top" alt="Sakamoto Days">
                     </div>
@@ -1897,7 +2043,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Spy x family.jpg" class="card-img-top" alt="Spy × Family">
                     </div>
@@ -1911,7 +2058,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Stardust Crusaders.jpg" class="card-img-top"
                             alt="JoJo Part 3: Stardust Crusaders">
@@ -1926,7 +2074,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Steel Ball Run.jpg" class="card-img-top" alt="JoJo Part 7: Steel Ball Run">
                     </div>
@@ -1940,7 +2089,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Stone Ocean.jpg" class="card-img-top" alt="JoJo Part 1: Stone Ocean ">
                     </div>
@@ -1954,7 +2104,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/The JOJOlands.jpg" class="card-img-top" alt="JoJo Part 9: The JOJOLands">
                     </div>
@@ -1968,7 +2119,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/The Seven Deadly Sins.jpg" class="card-img-top" alt="The Seven Deadly Sins">
                     </div>
@@ -1982,7 +2134,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Tokyo Ghoul.jpg" class="card-img-top" alt="Tokyo Ghoul">
                     </div>
@@ -1996,7 +2149,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Vagabond.jpg" class="card-img-top" alt="Vagabond">
                     </div>
@@ -2010,7 +2164,8 @@
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="comic-card">
+                <div class="comic-card" onclick="showModal(this)">
+                    <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                     <div class="card-img-container">
                         <img src="Img/Vinland Saga.jpg" class="card-img-top" alt="Vinland Saga">
                     </div>
@@ -2030,7 +2185,8 @@
             <div class="row g-4 comic_btn">
                 <h2 class="section-title my-5">Popular Manhwa & Webtoons</h2>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/Viral Hit.jpg" class="card-img-top" alt="Viral Hit">
                         </div>
@@ -2044,7 +2200,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/Lookism.jpg" class="card-img-top" alt="Lookism">
                         </div>
@@ -2058,7 +2215,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/Killer Peter.jpg" class="card-img-top" alt="Killer Peter">
                         </div>
@@ -2072,7 +2230,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/The Knight Only Lives Today.jpg" class="card-img-top"
                                 alt="The Knight Only Lives Today">
@@ -2087,7 +2246,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/The World After Fall.jpg" class="card-img-top" alt="The World After Fall">
                         </div>
@@ -2101,7 +2261,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/Omniscient Reader.jpg" class="card-img-top" alt="Omniscient Reader">
                         </div>
@@ -2115,7 +2276,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/Tears on a Withered flower.jpg" class="card-img-top"
                                 alt="Tears on a Withered flower">
@@ -2130,7 +2292,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/Questism.jpg" class="card-img-top" alt="Questism">
                         </div>
@@ -2144,7 +2307,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/Manager Kim.jpg" class="card-img-top" alt="Manager Kim">
                         </div>
@@ -2158,7 +2322,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/Hand Jumper.jpg" class="card-img-top" alt="Hand Jumper">
                         </div>
@@ -2172,7 +2337,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/Honey Lemon.jpg" class="card-img-top" alt="Honey Lemon">
                         </div>
@@ -2186,7 +2352,8 @@
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <div class="comic-card">
+                    <div class="comic-card" onclick="showModal(this)">
+                        <template>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet sunt totam aspernatur debitis cumque magni, dolor obcaecati officiis itaque repudiandae magnam labore ab ipsa quibusdam culpa dolorem. Cumque, dolorum.</template>
                         <div class="card-img-container">
                             <img src="Img/Study Group.jpg" class="card-img-top" alt="Study Group">
                         </div>
@@ -2245,6 +2412,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+                <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 

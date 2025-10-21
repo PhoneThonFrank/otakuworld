@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manhwa Webtoon Reader</title>
+    <meta name="description" content="Clean aesthetic manhwa webtoon reader with modal interface">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .comic-card {
+            transition: all 0.3s ease;
+        }
+        .comic-card:hover {
+            transform: translateY(-4px);
+        }
+        .modal-overlay {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        .scrollbar-thin::-webkit-scrollbar {
+            width: 4px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            background: #FF640A;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Comics Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <!-- Comic Card 1 -->
+            <div class="comic-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer" onclick="openModal(1)">
+                <div class="relative">
+                    <img 
+                        src="https://picsum.photos/200/280?random=1" 
+                        alt="Solo Leveling cover" 
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="p-3">
+                    <h3 class="font-semibold text-gray-800 mb-1 truncate">Solo Leveling</h3>
+                    <p class="text-xs text-gray-500 mb-2">Action, Fantasy</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Modal -->
+    <div id="comicModal" class="fixed inset-0 z-50 hidden">
+        <div class="modal-overlay absolute inset-0 animate-fade-in"></div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div id="modalContent" class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden animate-slide-up">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Define comics data
+        const comicsData = [
+            {
+                "id": 1,
+                "title": "Solo Leveling",
+                "author": "Chugong",
+                "artist": "Jang Sung-rak",
+                "status": "Ongoing",
+                "chapters": 179,
+                "rating": 4.9,
+                "genres": ["Action", "Fantasy", "Adventure"],
+                "description": "In a world where hunters, humans who possess magical abilities, must battle deadly monsters to protect the human race from certain annihilation, a notoriously weak hunter named Sung Jin-Woo finds himself in a seemingly endless struggle for survival. One day, after barely surviving an overwhelmingly powerful double dungeon that nearly wipes out his entire party, a mysterious program called the System chooses him as its sole player and in turn, gives him the extremely rare ability to level up in strength, possibly beyond any known limits. Follow Jin-Woo on his journey as he fights against all kinds of enemies, both men and monsters, to discover the secrets of the dungeons and the true source of his powers.",
+                "coverImage": "https://picsum.photos/400/560?random=11",
+                "bannerImage": "https://picsum.photos/800/300?random=12"
+            },
+        ];
+
+        // Function to open modal
+        function openModal(comicId) {
+            const comic = comicsData.find(item => item.id === comicId);
+            if (!comic) return;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = generateModalContent(comic);
+            
+            const modal = document.getElementById('comicModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Function to close modal
+        function closeModal() {
+            const modal = document.getElementById('comicModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Function to generate modal content
+        function generateModalContent(comic) {
+            return `
+                <div class="relative">
+                    <!-- Banner Image -->
+                    <div class="relative h-48 bg-gradient-to-r from-primary to-orange-400">
+                        <img 
+                            src="${comic.bannerImage}" 
+                            alt="${comic.title} banner" 
+                            class="w-full h-full object-cover opacity-60"
+                            loading="lazy"
+                        />
+                        <button 
+                            onclick="closeModal()" 
+                            class="absolute top-4 right-4 w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                        >
+                            <i class="fas fa-times text-gray-600"></i>
+                        </button>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-6 max-h-[calc(90vh-12rem)] overflow-y-auto scrollbar-thin">
+                        <div class="flex flex-col md:flex-row gap-6 mb-6">
+                            <!-- Cover Image -->
+                            <div class="flex-shrink-0">
+                                <img 
+                                    src="${comic.coverImage}" 
+                                    alt="${comic.title} cover" 
+                                    class="w-48 h-64 object-cover rounded-xl shadow-lg"
+                                    loading="lazy"
+                                />
+                            </div>
+
+                            <!-- Info -->
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div>
+                                        <h2 class="text-3xl font-bold text-gray-800 mb-2">${comic.title}</h2>
+                                        <p class="text-gray-600 mb-1">by ${comic.author}</p>
+                                        <p class="text-gray-600">Art by ${comic.artist}</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="flex items-center space-x-1 mb-2">
+                                            <i class="fas fa-star text-yellow-400"></i>
+                                            <span class="text-lg font-semibold">${comic.rating}</span>
+                                        </div>
+                                        <span class="inline-block px-3 py-1 rounded-full text-sm font-medium ${
+                                            comic.status === 'Ongoing' ? 'bg-primary text-white' : 'bg-green-500 text-white'
+                                        }">
+                                            ${comic.status}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Stats -->
+                                <div class="grid grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                        <div class="text-2xl font-bold text-primary">${comic.chapters}</div>
+                                        <div class="text-sm text-gray-600">Chapters</div>
+                                    </div>
+                                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                        <div class="text-2xl font-bold text-primary">${Math.floor(comic.rating * 100)}K</div>
+                                        <div class="text-sm text-gray-600">Readers</div>
+                                    </div>
+                                </div>
+
+                                <!-- Genres -->
+                                <div class="mb-6">
+                                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Genres</h3>
+
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="flex gap-3">
+                                    <button class="flex-1 bg-primary text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
+                                        <i class="fas fa-play mr-2"></i>Start Reading
+                                    </button>
+                                    <button class="w-12 h-12 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
+                                        <i class="far fa-bookmark text-gray-600"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Synopsis</h3>
+                            <p class="text-gray-600 leading-relaxed">${comic.description}</p>
+                        </div>
+
+                        <!-- Chapters Preview -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Latest Chapters</h3>
+                            <div class="space-y-2">
+                                ${Array.from({ length: 5 }, (_, i) => `
+                                    <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                                        <div>
+                                            <span class="font-medium text-gray-800">Chapter ${comic.chapters - i}</span>
+                                            <span class="text-sm text-gray-500 ml-2">2 days ago</span>
+                                        </div>
+                                        <div class="flex items-center space-x-4">
+                                            <span class="text-sm text-gray-500">15.2K views</span>
+                                            <i class="fas fa-lock text-gray-400"></i>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Close modal when clicking outside content
+        document.getElementById('comicModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
