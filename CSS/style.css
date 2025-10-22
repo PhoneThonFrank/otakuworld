@@ -258,6 +258,8 @@ body {
 
 .dropdown-menu {
     margin-top: 5px !important;
+    border-radius: 1.5rem;
+    overflow: hidden;
 }
 
 .dropdown-menu .dropdown-custom-con {
@@ -269,7 +271,7 @@ body {
     overflow-y: scroll !important;
     padding: 1px 5px;
     justify-content: center;
-
+    
 }
 
 .dropdown-menu button {

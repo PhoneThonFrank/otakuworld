@@ -17,6 +17,8 @@ searchResultText.classList.add('d-none');
 searchResultText.classList.remove('d-block');
 
 function search(keyword) {
+    // console.log(keyword);
+    
     searchResultText.innerHTML = `Search results for "${keyword}"`;
 
     searchResultText.classList.add('d-block');
@@ -103,18 +105,80 @@ clearBtnForSearchMobile.addEventListener('click', () => {
     clear();
 });
 
+const popularComicAuthors = [
+  "Alan Moore",
+  "Grant Morrison",
+  "Neil Gaiman",
+  "Stan Lee",
+  "Frank Miller",
+  "Brian K. Vaughan",
+  "Jonathan Hickman",
+  "Geoff Johns",
+  "Ed Brubaker",
+  "Jack Kirby",
+  "Mark Waid",
+  "J. Michael Straczynski",
+  "Greg Rucka",
+  "Scott Snyder",
+  "Rick Remender",
+  "Robert Kirkman",
+  "Jim Starlin",
+  "Jeff Lemire",
+  "Garth Ennis",
+  "Mark Millar",
+  "Warren Ellis",
+  "Art Spiegelman",
+  "David Lloyd",
+  "Donny Cates",
+  "Marjorie Liu"
+];
+
+
+const popularComicArtists = [
+  "Jack Kirby",
+  "Steve Ditko",
+  "Frank Miller",
+  "Neal Adams",
+  "George Pérez",
+  "Alex Ross",
+  "Jim Lee",
+  "Mike Mignola",
+  "Bill Sienkiewicz",
+  "John Byrne",
+  "David Mazzucchelli",
+  "Carl Barks",
+  "Will Eisner",
+  "Todd McFarlane",
+  "Brian Bolland",
+  "Art Adams",
+  "Bernie Wrightson",
+  "Dave Sim",
+  "Joe Shuster",
+  "Mark Bagley",
+  "Amanda Conner",
+  "Chris Bachalo",
+  "Russ Braun",
+  "Erik Larsen"
+];
+
+
 function showModal(content) {
     console.log(content.children[2].children[1].innerHTML);
+    const title = content.children[2].children[0].children[0].innerHTML;
+    const author = popularComicAuthors[Math.floor(Math.random() * popularComicAuthors.length)];
+    const artist = popularComicArtists[Math.floor(Math.random() * popularComicArtists.length)];
+    const chapters = Math.floor(Math.random() * 100) + 1;
+    const rating = Math.floor(Math.random()*5)+1;
 
     const comic = {
-        title: content.children[2].children[0].children[0].innerHTML,
-        author: "Anonymous",
-        artist: "Unknown",
+        title: title,
+        author: author,
+        artist: artist,
         status: "Completed",
-        chapters: Math.floor(Math.random() * 100) + 1,
-        rating: '3',
+        chapters: chapters,
+        rating: rating,
         genres: content.children[2].children[1].innerHTML,
-        description: content.children[0].innerHTML,
+        description: `<b>${title}</b> is a good ${content.children[2].children[1].innerHTML} comic by ${author}. The art is beautifully made by ${artist}. It has ${chapters} chapters in total. It has got an average rating of ${rating} out of 5. Enjoy reading ${title}!`,
         coverImage: content.children[1].children[0].src,
         bannerImage: content.children[1].children[0].src,
     }
@@ -228,7 +292,7 @@ function showModal(content) {
 
                         <!-- Description -->
                         <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Synopsis</h3>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Description</h3>
                             <p class="text-gray-600 leading-relaxed">${comic.description}</p>
                         </div>
 

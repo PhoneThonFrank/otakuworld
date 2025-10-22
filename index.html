@@ -78,27 +78,29 @@
                     <i class="bi bi-search"></i>
                 </button>
                 <div class="dropdown lg-search-hide">
-                    <button class="btn btn-light dropdown-toggle" style="border: 1px dashed #FF640A !important; height: 49px; border-radius: 1.5rem;"
+                    <button class="btn btn-light dropdown-toggle" style="box-shadow: 0 1px 4px rgba(30, 34, 90, 0.04); transition: border-color 0.25s, box-shadow 0.25s; border-radius: 1.5rem; height: 50px; border: 1.5px solid #ececec !important;"
                         type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Genre
                     </button>
                     <ul class="dropdown-menu">
                         <div class="dropdown-custom-con">
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Adventure</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Action</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Comedy</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Drama</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Fantasy</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Historical</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Mystery</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Mecha</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Supernatural</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Slice of Life</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Science</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Sports</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Sci-Fi</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Psychological</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Post-Apocalyptic</button>
+<button class="btn-primary btn" search-keyword="Adventure" onclick="search(this.getAttribute('search-keyword'))">🧭 Adventure</button>
+<button class="btn-primary btn" search-keyword="Action" onclick="search(this.getAttribute('search-keyword'))">🔥 Action</button>
+<button class="btn-primary btn" search-keyword="Comedy" onclick="search(this.getAttribute('search-keyword'))">😂 Comedy</button>
+<button class="btn-primary btn" search-keyword="Drama" onclick="search(this.getAttribute('search-keyword'))">🎭 Drama</button>
+<button class="btn-primary btn" search-keyword="Fantasy" onclick="search(this.getAttribute('search-keyword'))">🐉 Fantasy</button>
+<button class="btn-primary btn" search-keyword="Historical" onclick="search(this.getAttribute('search-keyword'))">🏛️ Historical</button>
+<button class="btn-primary btn" search-keyword="Mystery" onclick="search(this.getAttribute('search-keyword'))">🕵 Mystery</button>
+<button class="btn-primary btn" search-keyword="Mecha" onclick="search(this.getAttribute('search-keyword'))">🤖 Mecha</button>
+<button class="btn-primary btn" search-keyword="Supernatural" onclick="search(this.getAttribute('search-keyword'))">👻 Supernatural</button>
+<button class="btn-primary btn" search-keyword="Slice of Life" onclick="search(this.getAttribute('search-keyword'))">🏡 Slice of Life</button>
+<button class="btn-primary btn" search-keyword="Science" onclick="search(this.getAttribute('search-keyword'))">🔬 Science</button>
+<button class="btn-primary btn" search-keyword="Sports" onclick="search(this.getAttribute('search-keyword'))">🏆 Sports</button>
+<button class="btn-primary btn" search-keyword="Sci-Fi" onclick="search(this.getAttribute('search-keyword'))">🚀 Sci‑Fi</button>
+<button class="btn-primary btn" search-keyword="Psychological" onclick="search(this.getAttribute('search-keyword'))">🧠 Psychological</button>
+<button class="btn-primary btn" search-keyword="Post-Apocalyptic" onclick="search(this.getAttribute('search-keyword'))">☢️ Post‑Apocalyptic</button>
+
+
                         </div>
 
                     </ul>
@@ -154,27 +156,29 @@
 
             <div class="d-flex">
                 <div class="dropdown">
-                    <button class="btn btn-light dropdown-toggle" style="border: 1px dashed #FF640A !important; border-radius: 1.5rem; height: 49px;"
+                    <button class="btn btn-light dropdown-toggle" style="box-shadow: 0 1px 4px rgba(30, 34, 90, 0.04); transition: border-color 0.25s, box-shadow 0.25s; border-radius: 1.5rem; height: 50px; border: 1.5px solid #ececec !important;"
                         type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Genre
                     </button>
                     <ul class="dropdown-menu">
                         <div class="dropdown-custom-con">
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Adventure</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Action</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Comedy</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Drama</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Fantasy</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Historical</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Mystery</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Mecha</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Supernatural</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Slice of Life</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Science</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Sports</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Sci-Fi</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Psychological</button>
-                            <button class="btn-primary btn" onclick="search(this.innerHTML)">Post-Apocalyptic</button>
+<button class="btn-primary btn" search-keyword="Adventure" onclick="search(this.getAttribute('search-keyword'))">🧭 Adventure</button>
+<button class="btn-primary btn" search-keyword="Action" onclick="search(this.getAttribute('search-keyword'))">🔥 Action</button>
+<button class="btn-primary btn" search-keyword="Comedy" onclick="search(this.getAttribute('search-keyword'))">😂 Comedy</button>
+<button class="btn-primary btn" search-keyword="Drama" onclick="search(this.getAttribute('search-keyword'))">🎭 Drama</button>
+<button class="btn-primary btn" search-keyword="Fantasy" onclick="search(this.getAttribute('search-keyword'))">🐉 Fantasy</button>
+<button class="btn-primary btn" search-keyword="Historical" onclick="search(this.getAttribute('search-keyword'))">🏛️ Historical</button>
+<button class="btn-primary btn" search-keyword="Mystery" onclick="search(this.getAttribute('search-keyword'))">🕵 Mystery</button>
+<button class="btn-primary btn" search-keyword="Mecha" onclick="search(this.getAttribute('search-keyword'))">🤖 Mecha</button>
+<button class="btn-primary btn" search-keyword="Supernatural" onclick="search(this.getAttribute('search-keyword'))">👻 Supernatural</button>
+<button class="btn-primary btn" search-keyword="Slice of Life" onclick="search(this.getAttribute('search-keyword'))">🏡 Slice of Life</button>
+<button class="btn-primary btn" search-keyword="Science" onclick="search(this.getAttribute('search-keyword'))">🔬 Science</button>
+<button class="btn-primary btn" search-keyword="Sports" onclick="search(this.getAttribute('search-keyword'))">🏆 Sports</button>
+<button class="btn-primary btn" search-keyword="Sci-Fi" onclick="search(this.getAttribute('search-keyword'))">🚀 Sci‑Fi</button>
+<button class="btn-primary btn" search-keyword="Psychological" onclick="search(this.getAttribute('search-keyword'))">🧠 Psychological</button>
+<button class="btn-primary btn" search-keyword="Post-Apocalyptic" onclick="search(this.getAttribute('search-keyword'))">☢️ Post‑Apocalyptic</button>
+
+
                         </div>
 
                     </ul>

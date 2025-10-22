@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 .footer {
     background-color: #ffffff;
     margin: 0;
@@ -69,6 +70,9 @@
 }
 
 select {
-    border: 1px dashed #FF640A !important;
-    background-color: #ff640a17 !important;
+    border-radius: 1.5rem;
+    outline: none !important;
+    box-shadow: 0 1px 4px rgba(30, 34, 90, 0.04);
+    transition: border-color 0.25s, box-shadow 0.25s;
+    border: 1.5px solid #ececec !important;
 }
